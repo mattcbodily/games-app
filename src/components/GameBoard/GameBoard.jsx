@@ -2,6 +2,9 @@ import { useState } from 'react'
 
 import { TTT_NEW_GAME_BOARD } from '../../constants/Game'
 
+import { checkForWinner } from '../../utils/GamePlay'
+
+// Move game cell to its own component and move this with it as the className
 const gameCellStyles = 'h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus'
 
 export const GameBoard = ({ playerTurn, setPlayerTurn }) => {
@@ -30,13 +33,14 @@ export const GameBoard = ({ playerTurn, setPlayerTurn }) => {
       setPlayerTwoCells([...playerTwoCells, cellNumber])
     }
 
-    // Check for winner
+    const roundHasWinner = checkForWinner(playerOneCells, playerTwoCells)
+
+    if (!roundHasWinner) {
+      // Check for tie
+    }
 
     changePlayerTurn()
   }
-
-  console.log('1', playerOneCells)
-  console.log('2', playerTwoCells)
 
   return (
     <div className='h-fit grid grid-cols-3 grid-rows-3 gap-1'>
