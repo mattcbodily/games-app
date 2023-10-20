@@ -1,11 +1,9 @@
-import { useState } from 'react'
+import { GameBoard } from './components/GameBoard'
 
 function App() {
-  const [gameBoard, setGameBoard] = useState(newGameBoard)
-
   return (
-    <div>
-      GameBoard
+    <div className='h-screen w-full flex justify-center items-center'>
+      <GameBoard />
     </div>
   )
 }
