@@ -14,7 +14,7 @@ export const GameBoard = ({ playerTurn, setPlayerTurn }) => {
 
     const gameBoardSlice = gameBoard.slice()
 
-    gameBoard.splice(cellNumber, 0, playerTurn)
+    gameBoardSlice.splice(cellNumber, 1, playerTurn)
 
     setGameBoard(gameBoardSlice)
     changePlayerTurn()
