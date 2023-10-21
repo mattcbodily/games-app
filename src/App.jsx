@@ -1,6 +1,4 @@
-import { useState } from 'react'
-
-import { GameBoard } from './components/GameBoard'
+import { Link } from 'react-router-dom'
 
 // TO DO:
 
@@ -21,12 +19,14 @@ import { GameBoard } from './components/GameBoard'
 // - Add themeing
 
 function App() {
-  const [playerTurn, setPlayerTurn] = useState('🦙')
-
   return (
     <div className='h-screen w-full flex flex-col justify-center items-center'>
-      <p className='text-4xl mb-8'>{playerTurn}'s turn</p>
-      <GameBoard playerTurn={playerTurn} setPlayerTurn={setPlayerTurn} />
+      <h2 className='text-4xl mb-8'>Hello! Pick a game</h2>
+      <button className='btn btn-primary'>
+        <Link to='/tic-tac-toe'>
+          Tic Tac Toe 3x3
+        </Link>
+      </button>
     </div>
   )
 }
