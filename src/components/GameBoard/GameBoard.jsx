@@ -84,11 +84,9 @@ export const GameBoard = () => {
             >
               Play again
             </button>
-            <button className='btn btn-accent'>
-              <Link to='/'>
-                Leave game
-              </Link>
-            </button>
+            <Link className='btn btn-accent' to='/'>
+              Leave game
+            </Link>
           </form>
         </div>
       </dialog>
@@ -105,11 +103,9 @@ export const GameBoard = () => {
             >
               Play again
             </button>
-            <button className='btn btn-accent'>
-              <Link to='/'>
-                Leave game
-              </Link>
-            </button>
+            <Link className='btn btn-accent' to='/'>
+              Leave game
+            </Link>
           </form>
         </div>
       </dialog>

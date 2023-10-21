@@ -16,14 +16,14 @@ export const PlayerSelect = () => {
           <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' key={piece} onClick={playerOne ? () => setPlayerTwo(piece) : () => setPlayerOne(piece)}>{piece}</div>
         ))}
       </div>
-      <button 
+      <Link 
         className='btn btn-primary mt-8' 
-        disabled={!playerOne || !playerTwo}
+        disabled={!playerOne || !playerTwo} 
+        state={{ playerOne, playerTwo }}
+        to='/tic-tac-toe'
       >
-        <Link to='/tic-tac-toe' state={{ playerOne, playerTwo }}>
-          Start Game
-        </Link>
-      </button>
+        Start Game
+      </Link>
     </main>
   )
 }
