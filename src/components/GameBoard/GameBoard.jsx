@@ -33,10 +33,14 @@ export const GameBoard = ({ playerTurn, setPlayerTurn }) => {
       setPlayerTwoCells([...playerTwoCells, cellNumber])
     }
 
-    let roundHasWinner = checkForWinner(gameBoardSlice, '🦙', '🐢')
-    console.log(roundHasWinner)
+    const roundHasWinner = checkForWinner(gameBoardSlice, '🦙', '🐢')
     if (!roundHasWinner) {
       // Check for tie
+      const tieGame = gameBoardSlice.every(val => !!val === true)
+      
+      if (tieGame) {
+        return 'Cat scratch!'
+      }
     }
 
     changePlayerTurn()
