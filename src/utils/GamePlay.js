@@ -1,6 +1,7 @@
-import { TTT_WIN_CONDITIONS } from '../constants/Game'
-
-export const checkForWinner = (playerOneCells, playerTwoCells) => {
-  // figure this out so that even when a player has other cells selected, if they have a win scenario this should still return true
-  // Check win condition cells for the same value?
+export const checkForWinner = (gameBoard, playerOneGamePiece, playerTwoGamePiece) => {
+  if ((gameBoard[0] === playerOneGamePiece && gameBoard[1] && playerOneGamePiece && gameBoard[2] === playerOneGamePiece) || (gameBoard[3] === playerOneGamePiece && gameBoard[4] && playerOneGamePiece && gameBoard[5] === playerOneGamePiece) || (gameBoard[6] === playerOneGamePiece && gameBoard[7] && playerOneGamePiece && gameBoard[8] === playerOneGamePiece) || (gameBoard[0] === playerOneGamePiece && gameBoard[3] && playerOneGamePiece && gameBoard[6] === playerOneGamePiece) || (gameBoard[1] === playerOneGamePiece && gameBoard[4] && playerOneGamePiece && gameBoard[7] === playerOneGamePiece) || (gameBoard[2] === playerOneGamePiece && gameBoard[5] && playerOneGamePiece && gameBoard[8] === playerOneGamePiece) || (gameBoard[0] === playerOneGamePiece && gameBoard[4] && playerOneGamePiece && gameBoard[8] === playerOneGamePiece) || (gameBoard[2] === playerOneGamePiece && gameBoard[4] && playerOneGamePiece && gameBoard[6] === playerOneGamePiece)) {
+    return `${playerOneGamePiece} wins!`
+  } else if ((gameBoard[0] === playerTwoGamePiece && gameBoard[1] && playerTwoGamePiece && gameBoard[2] === playerTwoGamePiece) || (gameBoard[3] === playerTwoGamePiece && gameBoard[4] && playerTwoGamePiece && gameBoard[5] === playerTwoGamePiece) || (gameBoard[6] === playerTwoGamePiece && gameBoard[7] && playerTwoGamePiece && gameBoard[8] === playerTwoGamePiece) || (gameBoard[0] === playerTwoGamePiece && gameBoard[3] && playerTwoGamePiece && gameBoard[6] === playerTwoGamePiece) || (gameBoard[1] === playerTwoGamePiece && gameBoard[4] && playerTwoGamePiece && gameBoard[7] === playerTwoGamePiece) || (gameBoard[2] === playerTwoGamePiece && gameBoard[5] && playerTwoGamePiece && gameBoard[8] === playerTwoGamePiece) || (gameBoard[0] === playerTwoGamePiece && gameBoard[4] && playerTwoGamePiece && gameBoard[8] === playerTwoGamePiece) || (gameBoard[2] === playerTwoGamePiece && gameBoard[4] && playerTwoGamePiece && gameBoard[6] === playerTwoGamePiece)) {
+    return `${playerTwoGamePiece} wins!`
+  }
 }
