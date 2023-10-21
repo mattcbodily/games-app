@@ -6,7 +6,8 @@ import {
 } from 'react-router-dom'
 
 import App from './App.jsx'
-import { TicTacToe } from './components/TicTacToe/TicTacToe.jsx'
+import { GameBoard } from './components/GameBoard/GameBoard'
+import { PlayerSelect } from './components/PlayerSelect/PlayerSelect.jsx'
 
 import './index.css'
 
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: '/player-select',
+    element: <PlayerSelect />
+  },
+  {
     path: '/tic-tac-toe',
-    element: <TicTacToe />
+    element: <GameBoard />
   }
 ])
 
