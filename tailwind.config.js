@@ -5,7 +5,17 @@ export default {
     './src/**/*.{js,jsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        zoom: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' }
+        }
+      },
+      animation: {
+        zoom: 'zoom 250ms linear'
+      }
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
