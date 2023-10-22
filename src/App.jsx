@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom'
+import { routes } from './routes'
 
 function App() {
   return (
-    <div className='h-screen w-full flex flex-col justify-center items-center'>
-      <h2 className='text-4xl mb-8'>Hello! Pick a game</h2>
-      <Link className='btn btn-primary' to='/player-select'>
-        Tic Tac Toe 3x3
-      </Link>
+    <div className='h-screen w-full'>
+      {/* Add header here */}
+      {routes}
+      {/* Add daisyui bottom navigation here */}
     </div>
   )
 }
