@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+import { GameCell } from './GameCell'
+
 import { TTT_NEW_GAME_BOARD } from '../../constants/Game'
 
 import { checkForWinner } from '../../utils/GamePlay'
@@ -47,15 +49,7 @@ export const GameBoard = () => {
       <main className='h-screen w-full flex flex-col justify-center items-center'>
         <p className='text-4xl mb-8'>{playerTurn}'s turn</p>
         <div className='h-fit grid grid-cols-3 grid-rows-3 gap-1'>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(0)}>{gameBoard[0]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(1)}>{gameBoard[1]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(2)}>{gameBoard[2]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(3)}>{gameBoard[3]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(4)}>{gameBoard[4]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(5)}>{gameBoard[5]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(6)}>{gameBoard[6]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(7)}>{gameBoard[7]}</div>
-          <div className='h-28 w-28 border-2 rounded-md border-primary flex justify-center items-center text-6xl active:bg-primary-focus' onClick={() => onCellClick(8)}>{gameBoard[8]}</div>
+          {gameBoard.map((emoji, i) => <GameCell emoji={emoji} onCellClick={() => onCellClick(i)} />)}
         </div>
       </main>
       <dialog id='game_winner_modal' className='modal'>
