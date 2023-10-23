@@ -46,12 +46,12 @@ export const GameBoard = () => {
 
   return (
     <>
-      <main className='h-screen w-full flex flex-col justify-center items-center'>
+      <div className='h-screen w-full flex flex-col justify-center items-center'>
         <p className='text-4xl mb-8'>{playerTurn}'s turn</p>
         <div className='h-fit grid grid-cols-3 grid-rows-3 gap-1'>
           {gameBoard.map((emoji, i) => <GameCell emoji={emoji} onCellClick={() => onCellClick(i)} />)}
         </div>
-      </main>
+      </div>
       <dialog id='game_winner_modal' className='modal'>
         <div className='modal-box'>
           <h3 className='font-bold text-2xl text-center mb-4'>{playerTurn} wins!</h3>
