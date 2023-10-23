@@ -26,16 +26,16 @@ export default defineConfig({
         "name": "LlamaGames",
         "icons": [
           {
+            "src": "/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"    
+          },
+          {
             "src": "/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
-          },
-          {
-            "src": "/maskable_icon_x192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"    
           },
           {
             "src": "/icon-256x256.png",
