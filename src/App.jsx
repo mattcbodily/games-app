@@ -1,3 +1,5 @@
+import { BottomNavigation } from './components/BottomNavigation'
+
 import { routes } from './routes'
 
 function App() {
@@ -5,7 +7,7 @@ function App() {
     <div className='h-screen w-full'>
       {/* Add header here */}
       {routes}
-      {/* Add daisyui bottom navigation here */}
+      <BottomNavigation />
     </div>
   )
 }
