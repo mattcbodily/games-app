@@ -19,7 +19,7 @@ export const PlayerSelect = () => {
   return (
     <div className='h-screen w-full flex flex-col items-center'>
       <div className='w-[290px] mt-8 mb-8 flex justify-between'>
-        <div className='flex flex-col items-center'>
+        <div className='h-8 flex flex-col items-center'>
           <p className='text-4xl'>{playerOne}</p>
           <span className='text-lg'>Player 1</span>
         </div>
