@@ -4,7 +4,7 @@ import { routes } from './routes'
 
 function App() {
   return (
-    <div className='h-screen w-full'>
+    <div>
       {/* Add header here */}
       {routes}
       <BottomNavigation />
